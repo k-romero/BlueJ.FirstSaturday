@@ -1,4 +1,4 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
+//import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.awt.SystemTray;
 import java.util.concurrent.ThreadLocalRandom;
@@ -7,8 +7,8 @@ import java.util.function.Supplier;
 /**
  * Writeloops get you thinking about how to do different things with loops.
  *
- * @author anonymous coward
- * @version -0.3
+ * @author Kevin Romero
+ * @version -0.3 02.07.2020
  * 
  */
 public class WriteLoops {
@@ -17,46 +17,34 @@ public class WriteLoops {
 
     public int oneToFive() {
         int w = 0;
-
-        // Write a FOR loop that counts from 1 to 10.
-            // calling
-            w = w + 1;
-            // each time through the loop
-
-        // this will tell the test how many times the loop executed.
+        for (int i = 1; i <= 5; i++){
+            w += 1;
+        }
         return w;
     }
 
     public int oneToTen() {
         int w = 0;
-
-        // Write a FOR loop that counts from 1 to 10.
-        // calling
-        w = w + 1;
-        // each time through the loop
-        
+        for (int i = 1; i <= 10; i++){
+            w += 1;
+        }
         return w;
     }
 
     public int startAtTwentyOne() {
         int w = 0;
-
-        // Write a FOR loop that makes 10 iterations, start at 21.
-        // calling
-        w = w + 1;
-        // each time through the loop
-        
+        for (int i = 21; i <= 31 ; i++){
+            w += 1;
+        }
         return w;
     }
 
     public int countDown() {
         int w = 0;
-
+        for (int i = 100; i > 0; i--){
+          w += 1;
+        }
         // Write a FOR loop that counts down from 100 to 0.
-        // calling
-        w = w + 1;
-        // each time through the loop
-        
         return w;
     }
 
