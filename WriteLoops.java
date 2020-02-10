@@ -243,8 +243,8 @@ public class WriteLoops {
         int sumOfThrees = 0;
 
         // this is a so called Enhanced for loop
-        for (int index : threes_array) {
-            sumOfThrees = sumOfThrees + threes_array[index];
+        for (int i = 0; i<= threes_array.length - 1; i++) {
+            sumOfThrees = sumOfThrees + threes_array[i];
             // calling
             w = w + 1;
             // each time through the inner loop
