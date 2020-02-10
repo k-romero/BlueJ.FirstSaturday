@@ -183,11 +183,9 @@ public class WriteLoops {
         // do your while loop here
         do {
             runningScore += currentScore;
-            
             w = w + 1;
         } while (runningScore < highestScore);
             // calling
-            w = w + 1;
             // each time through the inner loop
 
         return w >= 3;
