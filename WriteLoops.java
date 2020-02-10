@@ -50,10 +50,13 @@ public class WriteLoops {
 
     public int byTwoTo32() {
         int w = 0;
-
+        int step = 2;
+        for (int i = 0; i <= 32; i += step){
+          w += 1;
+          //test is wrong?
+        }
         // Write a FOR loop from 0 to 32 by 2s.
         // calling
-        w = w + 1;
         // each time through the loop
         return w;
     }
