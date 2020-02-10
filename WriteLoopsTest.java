@@ -124,6 +124,41 @@ public class WriteLoopsTest
         WriteLoops writeLoo1 = new WriteLoops();
         assertEquals(3, writeLoo1.checkServerStatus());
     }
+    
+    @Test
+    public void TestRewriteFoo()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(7, writeLoo1.rewriteFooAsFor());
+    }
+    
+    @Test
+    public void TestRewriteFooAsWhile()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(7, writeLoo1.rewriteFooAsWhile());
+    }
+    
+    @Test
+    public void TestTallyVotes()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(13, writeLoo1.tallyVote1());
+    }
+    
+    @Test
+    public void TestTallyVotesAdams()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(4, writeLoo1.tallyVote3());
+    }
+    
+    @Test
+    public void TestTallyVotesWhile()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(13, writeLoo1.tallyVote2());
+    }
 }
 
 

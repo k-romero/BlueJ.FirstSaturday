@@ -243,8 +243,8 @@ public class WriteLoops {
         int sumOfThrees = 0;
 
         // this is a so called Enhanced for loop
-        for (int i = 0; i<= threes_array.length - 1; i++) {
-            sumOfThrees = sumOfThrees + threes_array[i];
+        for (int index : threes_array) {
+            sumOfThrees = sumOfThrees + threes_array[index];
             // calling
             w = w + 1;
             // each time through the inner loop
@@ -261,12 +261,13 @@ public class WriteLoops {
     public int rewriteFooAsFor() {
         int w = 0;
         int sumOfThrees = 0;
-
+        for (int i = 0; i<= threes_array.length - 1; i++) {
+            sumOfThrees = sumOfThrees + threes_array[i];
  
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
@@ -278,12 +279,14 @@ public class WriteLoops {
     public int rewriteFooAsWhile() {
         int w = 0;
         int sumOfThrees = 0;
-
- 
+        int i = 0;
+        while (i <= (threes_array.length-1)){
+            sumOfThrees = sumOfThrees + threes_array[i];
             // calling
+            i++;
             w = w + 1;
             // each time through the inner loop
-        
+        }
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
@@ -302,11 +305,16 @@ public class WriteLoops {
         boolean onTime = true;
 
         // ADD YOUR CODE here.
- 
-            // be sure to call
-            w = w + 1;
-            // each time inside the loop
+        boolean yardNeedsMowed = true;
         
+        while(isSummer()){
+            if (yardNeedsMowed){
+                yellAtJuniorToMowLawn();
+            }
+            w = w + 1;
+        } 
+        sendJuniorBackToSchool("First Day of School");
+       
         return w;
     }
 
@@ -318,13 +326,25 @@ public class WriteLoops {
     public int tallyVote1() {
         int w = 0;
         int numberOfVotes = voteTallies.length;
-
- 
-            // calling
+        for(int i = 0; i <= numberOfVotes -1; i++){
             w = w + 1;
-            // each time through the inner loop
-        
+            System.out.println(voteTallies[i]);
+        }
         return w;
+    }
+    
+    public int tallyVote3() {
+        int w = 0;
+        int result = 0;
+        int numberOfVotes = voteTallies.length;
+        for(int i = 0; i <= numberOfVotes -1; i++){
+            w = w + 1;
+            System.out.println(voteTallies[i]);
+            if (voteTallies[i] == "Adams"){
+                result++;
+            }
+        }
+        return result;
     }
 
     // Given an array voteTallies[], write a WHILE loop that prints out each value
@@ -333,12 +353,12 @@ public class WriteLoops {
     public int tallyVote2() {
         int w = 0;
         int numberOfVotes = voteTallies.length;
-
-
-            // calling
+        int idx = 0;
+        while (idx <= numberOfVotes - 1){
+            System.out.println(voteTallies[idx]);
+            idx++;
             w = w + 1;
-            // each time through the inner loop
-        
+        }
         return w;
     }
 
