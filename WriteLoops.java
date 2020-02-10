@@ -187,7 +187,6 @@ public class WriteLoops {
         } while (runningScore < highestScore);
             // calling
             // each time through the inner loop
-
         return w >= 3;
     }
 
